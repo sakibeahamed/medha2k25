@@ -1,0 +1,301 @@
+/* home.css */
+.main {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  
+  z-index: 5;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+  margin-top: 0px;
+  
+}
+
+@keyframes pulsate {
+  0% { filter: drop-shadow(0 0 40px rgba(255, 0, 0, 0.6)); }
+  50% { filter: drop-shadow(0 0 150px rgba(255, 0, 0, 1)); }
+  100% { filter: drop-shadow(0 0 40px rgba(255, 0, 0, 0.6)); }
+}
+
+@keyframes pulsateDC {
+  0% { filter: drop-shadow(0 0 40px rgba(0, 0, 255, 0.6)); }
+  50% { filter: drop-shadow(0 0 200px rgba(0, 0, 255, 1)); }
+  100% { filter: drop-shadow(0 0 40px rgba(0, 0, 255, 0.6)); }
+}
+
+@keyframes firePulsate {
+  0% { filter: drop-shadow(0 0 30px rgba(255, 69, 0, 0.6)); }
+  50% { filter: drop-shadow(0 0 60px rgba(255, 140, 0, 1)); }
+  100% { filter: drop-shadow(0 0 30px rgba(255, 69, 0, 0.6)); }
+}
+
+.marvel {
+  position: absolute;
+  left: -250px;
+  top: 220px; 
+  height: 110%;
+  width: 1000px;
+  animation: pulsate 2s infinite ease-in-out;
+  transform: scaleX(1) scaleY(1.4) rotateY(180deg);
+}
+
+.dc {
+  position: absolute;
+  right: -280px;
+  top: 220px;
+  height: 120%;
+  width: 1000px;
+  animation: pulsateDC 2s infinite ease-in-out;
+  transform: scaleX(1) scaleY(1.4) rotateY(180deg);
+}
+
+.countdown-container {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.countdown-item {
+  text-align: center;
+  min-width: 90px;
+}
+
+.countdown-value {
+  font-size: 4rem;
+  font-weight: 900;
+  font-family: 'Teko', sans-serif;
+  color: white;
+  margin-bottom: -0.8rem;
+  text-shadow: 0 0 20px currentColor;
+  letter-spacing: 2px;
+}
+
+.marvel-glow { color: #ff1c1c; }
+.dc-glow { color: #00a3ff; }
+
+.countdown-label {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.countdown-separator {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 3rem;
+  margin-top: -1.2rem;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Existing media queries and other element styles */
+@media (max-width: 600px) {
+  .marvel {
+    left: -250px;
+    top: 192px;
+    height: 80%;
+    width: 600px;
+  }
+  .main {
+    height: 88vh;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+    top:5px;
+    
+    
+    
+  }
+  .dc {
+    right: -260px;
+    top: 170px;
+    height: 80%;
+    width: 610px;
+  }
+
+  .logo1 {
+    position: absolute;
+    height: 50%;
+    width: 150%;
+    top: 30%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    animation: firePulsate 2s infinite ease-in-out;
+  }
+
+  .countdown-container {
+    padding: 20px;
+    gap: 0.8rem;
+    border-radius: 15px;
+    width: 100%; /* Adjust the width to fit the screen */
+    max-width: 330px; /* Set a max-width to ensure it doesn't get too wide */
+    top: 70%; /* Adjust the top position if needed */
+  }
+  .countdown-item {
+    min-width: auto; /* Allow items to shrink */
+  }
+
+  .countdown-value {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+    margin-bottom: -0.5rem;
+  }
+
+  .countdown-label {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+    letter-spacing: 1px; /* Reduce letter spacing */
+  }
+
+  .countdown-separator {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    margin-top: -0.8rem;
+  }
+/* 
+  .countdown-value {
+    font-size: 2rem;
+    margin-bottom: -0.5rem;
+  }
+
+  .countdown-label {
+    font-size: 0.4rem;
+    letter-spacing: 0px;
+  }
+
+  .countdown-separator {
+    font-size: 1rem;
+    margin-top: -0.8rem;
+  } */
+
+  .charakara {
+    height: 23%;
+    width: 54%;
+    top: 23.5%;
+    left: 24%;
+  }
+}
+
+@media (min-width: 601px) {
+  .logo1 {
+    position: absolute;
+    height: 150%;
+    width: 90%;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .charakara {
+    height: 60%;
+    width: 38%;
+    top: 10%;
+    left: 34%;
+    z-index:1;
+  }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.charakara {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  animation: rotate 10s linear infinite;
+  z-index: 1;
+}
+
+/* Existing CSS remains the same until the media queries */
+
+/* Tablet View */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .main {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+    margin-top: 0px;
+  }
+
+  .marvel {
+    left: -500px;
+    top: 240px;
+    height: 100%;
+    width: 1200px;
+    animation: pulsate 2s infinite ease-in-out;
+    transform: scaleX(1) scaleY(1.2) rotateY(180deg);
+  }
+
+  .dc {
+    right: -500px;
+    top: 210px;
+    height: 110%;
+    width: 1200px;
+    animation: pulsateDC 2s infinite ease-in-out;
+    transform: scaleX(1) scaleY(1.2) rotateY(180deg);
+  }
+
+  .logo1 {
+    position: absolute;
+    height: 100%;
+    width: 90%;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .charakara {
+    height: 35%;
+    width: 60%;
+    top: 21%;
+    left: 22%;
+    z-index: 1;
+  }
+
+  .countdown-container {
+    padding: 1.5rem 2.5rem;
+    gap: 1.2rem;
+    border-radius: 18px;
+    width: 90%;
+    max-width: 600px;
+    top: 75%;
+  }
+
+  .countdown-item {
+    min-width: 80px;
+  }
+
+  .countdown-value {
+    font-size: 3rem;
+    margin-bottom: -0.6rem;
+  }
+
+  .countdown-label {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .countdown-separator {
+    font-size: 2.5rem;
+    margin-top: -1rem;
+  }
+}
+
+

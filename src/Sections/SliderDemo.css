@@ -1,0 +1,70 @@
+/* Desktop styles */
+.slider {
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    height: 370px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .item {
+    position: absolute;
+    width: 600px;
+    height: 360px;
+    text-align: justify;
+    background-color: #fff;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(50% - 310px);
+    top: 0;
+    z-index: 1;
+  }
+  
+  .item h1 {
+    font-size: 1.5rem;
+  }
+  
+  .item p {
+    font-size: 1rem;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .slider {
+      margin-top: 50px;
+      height: 250px;
+    }
+  
+    .item {
+      width: 90%;
+      height: 250px;
+      left: 5%;
+      padding: 10px;
+    }
+  
+    .item h1 {
+      font-size: 1.2rem !important; /* Ensure this overrides other styles */
+    }
+  
+    .item p {
+      font-size: 0.8rem !important; /* Ensure this overrides other styles */
+    }
+  
+    #next,
+    #prev {
+      font-size: 40px !important;
+    }
+  
+    #next {
+      right: 5px !important;
+    }
+  
+    #prev {
+      left: 5px !important;
+    }
+  }

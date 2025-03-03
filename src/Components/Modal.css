@@ -1,0 +1,80 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+}
+
+.modalMain {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 85%;
+    background: white;
+    padding: 20px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.5);
+    border: 4px ridge #111;
+    border-radius: 10px;
+    z-index: 1000;
+    display: none;
+}
+
+.modalMain.open {
+    display: block;
+}
+
+.modalInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.closeIcon {
+    position: absolute;
+    top: -40px;
+    right: -10px;
+    font-size: 60px;
+    cursor: pointer;
+    color: #000;
+}
+
+.modalInner img {
+    width: 50vh;
+    height: 60vh;
+    background: #f0f0f0;
+    border: 2px ridge #888;
+    border-radius: 2%;
+}
+
+.modalInner input {
+    width: 80%;
+    padding: 8px;
+    border: 2px ridge #888;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modalInner button {
+    font-size: larger;
+    padding: 8px 20px;
+    border: 2px ridge #888;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.modalInner button:hover {
+    background: #0056b3;
+}
